@@ -4,11 +4,11 @@ const auth=async(req,res,next)=>{
     try {
         const token = req.header('Authorization');
 
-        jwt.verify(token,process.env.TOKEN_SECRET,(err,user)=>{
+        jwt.verify(token,process.env.TOKEN_SECRET,(err,data)=>{
             if(err){
                 console.log(err)
             }
-            req.user=user;
+            req.user=data;
             next()
         })
     } catch (error) {

@@ -7,7 +7,7 @@ const BlogSchema=new mongoose.Schema({
         ref:User,
         required:true
     },
-    tile:{
+    title:{
         type:String,
         required:true
     },
@@ -15,9 +15,9 @@ const BlogSchema=new mongoose.Schema({
         type:String,
         required:true
     },
-    photo:{
-        type:String,
-        required:true
+    photo: {
+        type:String
+    
     },
     category:{
         type:String,
